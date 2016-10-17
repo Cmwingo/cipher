@@ -13,15 +13,22 @@ $(function() {
     lastLetter = lastLetter.toUpperCase();
     var newString = firstLetter + sentence.slice(1,sentence.length - 1) + lastLetter;
     return newString;*/
-};
+  };
 
-var reverse = function(aString) {
-  return aString.split("").reverse().join("");
-};
+  var reverse = function(aString) {
+    var reverseString = aString.split("").reverse().join("");
+    reverseString = sentence + reverseString;
+    return reverseString;
 
-alert(caps());
-alert(reverse(caps()));
+  };
 
+  var charSelect = function(aString) {
+    var stringLength = aString.length;
+    var letter = aString.charAt(parseInt(aString.length/2));
+    return letter + aString;
+  }
+
+  alert(charSelect(reverse(caps())));
 
 
 
